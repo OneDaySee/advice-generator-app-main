@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  /* width: 480px; */
+  /* height: 100vh; */
+  background-color: var(--dark-grayish-blue);
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light-cyan);
+  border-radius: 1rem;
+  /* margin: 0 auto; */
+  padding: 1.25rem;
+  position: relative;
+}
+
+h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--neon-green);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: "Manrope", sans-serif;
+  letter-spacing: .1rem;
+  padding: .5rem 1.25rem 1.25rem 1.25rem;
+  font-size: 28px;
+}
+
+
+button {
+  background-color: var(--neon-green);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 5px var(--neon-green);
+  /* top: 0 */
+  left: 50%;
+  top: 90%;
+  transform: translateX(-50%);
+}
+
+button:hover {
+    box-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
+}
+
+.btn-img {
+  width: 1.5rem;
+  justify-content: center;
+}
+
+
+.divider-img{
+    /* padding-top: 1.5rem; */
+    /* padding-bottom: 3rem; */
+    margin-bottom: 1.5rem;
+    /* margin: 0 1rem 0 1rem; */
+}
+
+
+
+@media (min-width: 500px) {
+  .container {
+    max-width: 499px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 376px) {
+    .container {
+      /* max-width: 499px; */
+      margin: 20 20 20 20;
+    }
+  }
