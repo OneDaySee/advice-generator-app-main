@@ -20,11 +20,20 @@
 
       <p id="advice-text"></p>
 
-      <img
+      <picture>
+        <source
+          media="(min-width: 570px)"
+          srcset="./images/pattern-divider-desktop.svg"
+        />
+        <img class="divider-img" src="./images/pattern-divider-mobile.svg" alt="divider" />
+      </picture>
+
+
+      <!-- <img
         class="divider-img"
         src="images/pattern-divider-desktop.svg"
         alt=""
-      />
+      /> -->
 
       <button onclick="fetchAdvice()">
         <img class="btn-img" src="images/icon-dice.svg" alt="" />

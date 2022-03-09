@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  /* width: 480px; */
+  width: 500px;
   /* height: 100vh; */
   background-color: var(--dark-grayish-blue);
   display: flexbox;
@@ -52,7 +52,7 @@ h3 {
 p {
   font-family: "Manrope", sans-serif;
   letter-spacing: .1rem;
-  padding: .5rem 1.25rem 1.25rem 1.25rem;
+  padding: .5rem 1.25rem 0rem 1.25rem;
   font-size: 28px;
 }
 
@@ -74,7 +74,7 @@ button {
 }
 
 button:hover {
-    box-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
+    box-shadow: 0 0 20px var(--neon-green), 0 0 20px var(--neon-green);
 }
 
 .btn-img {
@@ -86,23 +86,24 @@ button:hover {
 .divider-img{
     /* padding-top: 1.5rem; */
     /* padding-bottom: 3rem; */
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     /* margin: 0 1rem 0 1rem; */
 }
 
 
-
+/* 
 @media (min-width: 500px) {
   .container {
-    max-width: 499px;
+    max-width: 40%;
     margin: 0 auto;
   }
-}
+} */
 
 
-@media (max-width: 376px) {
+@media (max-width: 768px) {
     .container {
-      /* max-width: 499px; */
-      margin: 20 20 20 20;
+      max-width: 90%;
+      /* margin: 20 20 20 20; */
     }
   }
