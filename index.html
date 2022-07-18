@@ -16,18 +16,21 @@
   </head>
   <body>
     <div class="container">
-      <h3 id="advice-number"></h3>
+      <h3 id="advice-number">Advice</h3>
 
-      <p id="advice-text"></p>
+      <p id="advice-text">Click Dice!</p>
 
       <picture>
         <source
           media="(min-width: 570px)"
           srcset="./images/pattern-divider-desktop.svg"
         />
-        <img class="divider-img" src="./images/pattern-divider-mobile.svg" alt="divider" />
+        <img
+          class="divider-img"
+          src="./images/pattern-divider-mobile.svg"
+          alt="divider"
+        />
       </picture>
-
 
       <!-- <img
         class="divider-img"
@@ -35,10 +38,46 @@
         alt=""
       /> -->
 
-      <button onclick="fetchAdvice()">
+      <!-- <button onclick="fetchAdvice()"> -->
+      <!-- </button> -->
+      <button id="btnGetAdvice">
         <img class="btn-img" src="images/icon-dice.svg" alt="" />
       </button>
     </div>
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      getAdvice = (e) => {
+        // console.log(e);
+        $.ajax({
+          url: "https://api.adviceslip.com/advice",
+          method: "GET",
+          success: (data) => {
+            // console.log(JSON.parse(data));
+            data = JSON.parse(data);
+            // console.log(data.slip);
+            $("#advice-number").text(`Advice #` + data.slip.id);
+            $("#advice-text").text(`"` + data.slip.advice + `"`);
+          },
+        });
+      };
+
+      abc = () => {
+        console.log("abc");
+      };
+
+      $(() => {
+        $("#btnGetAdvice").click(() => {
+          var a = $("#advice-text").text();
+          console.log(a);
+          getAdvice();
+          if (a == $("#advice-text").text()) {
+            console.log("text'ler ayni");
+            console.log($("#advice-text").text());
+          }
+          abc();
+        });
+      });
+    </script>
   </body>
 </html>
